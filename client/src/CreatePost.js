@@ -21,15 +21,15 @@ function CreatePost() {
     });
   };
 
-  
 
-  const handleClick =(event)=>{
+
+  const handleClick = (event) => {
     event.preventDefault();
     // console.log(post);
     axios
-    .post("/create",post)
-    .then((res)=>console.log(res))
-    .catch((err)=>console.log(err));
+      .post("/create", post)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -52,10 +52,10 @@ function CreatePost() {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button 
-        style={{width:"100%",marginBottom:"1rem"}} 
-        variant="outline-success"
-        onClick={handleClick}>CREATE POST</Button>
+        <Button
+          style={{ width: "100%", marginBottom: "1rem" }}
+          variant="outline-success"
+          onClick={handleClick}>CREATE POST</Button>
       </Form>
       <Button
         style={{ width: "100%" }}
